@@ -15,7 +15,7 @@ namespace Task1
         private static int[] ConvertArgsToIntArray(string[] args) =>
             args.Length == 1 ? Array.Empty<int>() : args[1..args.Length].Select(int.Parse).ToArray();
 
-        private static void TryPrintNumberWithMaxEjectionIfNotEmpty(int[] nums)
+        private static void TryPrintNumberWithMaxEjectionIfNotEmpty(int[] nums) 
         {
             try
             {

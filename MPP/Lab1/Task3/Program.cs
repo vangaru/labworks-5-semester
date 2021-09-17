@@ -16,9 +16,10 @@ namespace Task3
 
         private static string StripNotNullStringWhitespaces(string str)
         {
-            if (str[0] == ' ' && str[^1] == ' ') return str[1..^1];
-            if (str[0] == ' ') return str[1..];
-            return str[^1] == ' ' ? str[..^1] : str;
+            if (str[0] == ' ' && str[^1] == ' ') return StripNotNullStringWhitespaces(str[1..^1]);
+            if (str[0] == ' ') return StripNotNullStringWhitespaces(str[1..]);
+            if (str[^1] == ' ') return StripNotNullStringWhitespaces(str[..^1]);
+            return str;
         }
     }
 }
