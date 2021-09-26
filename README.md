@@ -81,5 +81,11 @@
 > **Траектория движения - [Циссоида диокла](https://ru.wikipedia.org/wiki/%D0%A6%D0%B8%D1%81%D1%81%D0%BE%D0%B8%D0%B4%D0%B0_%D0%94%D0%B8%D0%BE%D0%BA%D0%BB%D0%B0)**
 ***
 ## Операционные системы и системное программирование
+### [Лабораторная работа 1](https://github.com/vangaru/labworks-5-semester/tree/master/OS&SP/Lab1)
+### Вариант 10
+> Игра «Арканоид». Реализовать игру с одним уровнем. Возможность 2 раза пропустить мяч,
+> после 3-го игра заканчивается. Очки начисляются за разбитые блоки.
+> 
+> Made this task using [this video tutorial](https://www.youtube.com/watch?v=fVeLWGsdFn0&list=PLElhtYsGq0haMcAYcCPM-AGglUmKUkO5B)
 ***
 ## Специализированные языки обработки документов
