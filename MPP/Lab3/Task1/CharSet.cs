@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Collections;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace Task1
 
         public int Count() => Container.Count;
 
-        public bool ElementsEqual(CharSet other)
+        private bool ElementsEqual(CharSet other)
         {
             for (var i = 0; i < other.Count(); i++)
             {

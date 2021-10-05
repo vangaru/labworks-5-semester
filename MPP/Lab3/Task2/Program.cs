@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Task2
 {
@@ -13,7 +14,12 @@ namespace Task2
             // DictionaryManager.Add(new DictionaryItem {EnglishWord = "Summer", RussianWord = "Лето", Count = 5});
             // DictionaryManager.PrintItemsToConsole();
             await DictionaryManager.FillTreeFromFile();
+            var dItem = new DictionaryItem { EnglishWord = "Door", RussianWord = "Дверь" };
+            DictionaryManager.Add(dItem);
             DictionaryManager.PrintItemsToConsoleInRussianVariant();
+            DictionaryManager.Remove(dItem);
+            DictionaryManager.PrintItemsToConsoleInRussianVariant();
+            Console.WriteLine(DictionaryManager.Find("Cat").ToString());
         }
     }
 }

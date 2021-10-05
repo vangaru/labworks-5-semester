@@ -61,7 +61,7 @@ namespace Task2
             else
                 RemoveIfHasRightChildWithLeftChild(current, parent);
         }
-        
+
         private TreeNode GetNodeWithParent(DictionaryItem value, out TreeNode parent)
         {
             var currentNode = _head;

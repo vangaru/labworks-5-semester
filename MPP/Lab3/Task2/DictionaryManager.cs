@@ -147,5 +147,8 @@ namespace Task2
 
             DictionaryItems.Remove(dictionaryItem);
         }
+
+        public static DictionaryItem Find(string dictionaryItemName)
+            => DictionaryItems.FirstOrDefault(d => d.EnglishWord == dictionaryItemName);
     }
 }
