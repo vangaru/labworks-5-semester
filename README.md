@@ -117,6 +117,9 @@
 > 
 > **Траектория движения - [Циссоида диокла](https://ru.wikipedia.org/wiki/%D0%A6%D0%B8%D1%81%D1%81%D0%BE%D0%B8%D0%B4%D0%B0_%D0%94%D0%B8%D0%BE%D0%BA%D0%BB%D0%B0)**
 ***
+### [Лабораторная работа 2](https://github.com/vangaru/labworks-5-semester/tree/master/OOP/Lab2)
+> Разработать текстовый редактор
+***
 ## Операционные системы и системное программирование
 ### [Лабораторная работа 1](https://github.com/vangaru/labworks-5-semester/tree/master/OS&SP/Lab1)
 ### Вариант 10
