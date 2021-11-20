@@ -138,6 +138,20 @@ void TextEditor::on_actionRedo_triggered()
     ui->textEdit->redo();
 }
 
+void TextEditor::on_actionOpen_triggered()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,
+        "Open document", QDir::currentPath(), "Text documents (*.txt)");
+    if (fileName.isNull()) return;
+    if (m_fileName.isNull() && !isWindowModified()) {
+        loadFile(fileName);
+    }
+    else {
+        TextEditor * p = new TextEditor(this, fileName);
+        p->show();
+    }
+}
+
 void TextEditor::loadFile(const QString &fileName)
 {
     if (fileName.isEmpty()) {
@@ -166,24 +180,9 @@ void TextEditor::setFileName(const QString &name) {
             .arg(QApplication::applicationName()));
 }
 
-
-void TextEditor::on_actionOpen_triggered()
-{
-    QString fileName = QFileDialog::getOpenFileName(this,
-        "Open document", QDir::currentPath(), "Text documents (*.txt)");
-    if (fileName.isNull()) return;
-    if (m_fileName.isNull() && !isWindowModified()) {
-        loadFile(fileName);
-    }
-    else {
-        TextEditor * p = new TextEditor(this, fileName);
-        p->show();
-    }
-}
-
 bool TextEditor::saveFileAs(){
     QString fileName = QFileDialog::getSaveFileName(this, "Save document",
-       m_fileName.isNull()?QDir::currentPath():m_fileName, "Text documents (*.txt)");
+       m_fileName.isNull() ? QDir::currentPath() : m_fileName, "Text documents (*.txt)");
     if (fileName.isNull()) {
         return false;
     }

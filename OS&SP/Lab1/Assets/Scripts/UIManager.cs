@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public Text Target;
     public Text ScoreText;
     public Text LivesText;
+    public Text AboutText;
 
     public int Score { get; set; }
 

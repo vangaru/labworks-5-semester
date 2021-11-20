@@ -1,4 +1,6 @@
 ﻿using System;
+using AboutWindowApi;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -46,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     private void OnBrickDestruction(Brick obj)
     {
-        if (BricksManager.Instance.RemainingBricks.Count <= 0)
+        if (Helper.NoRemainingBricks(BricksManager.Instance.RemainingBricks.Count))
         {
             BallsManager.Instance.ResetBalls();
             GameManager.Instance.IsGameStarted = false;

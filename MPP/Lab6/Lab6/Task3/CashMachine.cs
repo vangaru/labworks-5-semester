@@ -13,7 +13,7 @@ namespace Task3
             _currentState = new AuthenticationState();
         }
 
-        public void GetCreditCardBack()
+        private void GetCreditCardBack()
         {
             if (_creditCard == null)
             {
@@ -28,7 +28,7 @@ namespace Task3
 
         public void EnterPassword()
         {
-            _currentState = !_currentState.EnterPassword(_creditCard.Number) 
+            _currentState = _currentState.EnterPassword(_creditCard.Password) 
                 ? new ReadyForOperationsState() 
                 : new BlockedState();
         }
@@ -42,8 +42,7 @@ namespace Task3
         {
             _currentState.Shutdown();
             if (_currentState is BlockedState) return;
-            GetCreditCardBack();
-            _currentState = new WaitingState();
+            GetCreditCardBack(); 
         }
     }
 }

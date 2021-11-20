@@ -4,8 +4,8 @@ namespace Task2
     {
         protected Account Wrapee;
         public override int BooksCountPerMonth { get; set; }
-        
-        public BaseDecorator(Account wrapee)
+
+        protected BaseDecorator(Account wrapee)
         {
             Wrapee = wrapee;
         }

@@ -1,0 +1,3 @@
+/home/tuesdaydude/src/labworks-5-semester/OOP/bits/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tuesdaydude/src/labworks-5-semester/OOP/bits/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tuesdaydude/src/labworks-5-semester/OOP/bits/cmake-build-debug/CMakeFiles/bits.dir

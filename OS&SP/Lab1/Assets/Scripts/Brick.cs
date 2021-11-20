@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AboutWindowApi;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 
@@ -73,7 +74,7 @@ public class Brick : MonoBehaviour
     {
         this.Hitpoints--;
 
-        if (this.Hitpoints <= 0 || instantKill)
+        if (Helper.ReadyToKill(this.Hitpoints, instantKill))
         {
             BricksManager.Instance.RemainingBricks.Remove(this);
             OnBrickDestruction?.Invoke(this);

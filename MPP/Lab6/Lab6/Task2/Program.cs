@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Task2
+﻿namespace Task2
 {
     internal static class Program
     {
